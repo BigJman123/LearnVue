@@ -5,5 +5,29 @@
 </head>
 <body>
     
+
+    <div id="root">
+        <!-- use v-model to bind the data value -->
+        <input type="text" id="input" v-model="message">
+
+        <p>The value of the input is: {{ message }}</p>
+    </div>
+
+
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+
+    <script>
+        // create Vue instance
+        new Vue ({
+            // bind to element in DOM
+            el: '#root',
+
+            // specify some data
+            data: {
+                message: "Hello World"
+            }
+
+        });
+    </script>
 </body>
 </html>
