@@ -2,17 +2,15 @@
 <html>
 <head>
     <title>Learn Vue</title>
+    <style>
+        .is-loading { background: red}
+    </style>
 </head>
 <body>
     
 
     <div id="root">
-        <ul>
-            <li v-for="name in names"v-text="name"></li>
-        </ul>
-
-        <input id="input" type="text" v-model="newName">
-        <button @click="addName">Add Name</button>
+        <button :class="{ 'is-loading': isLoading }" @click="toggleClass">Click Me</button>
     </div>
 
 
@@ -25,20 +23,14 @@
             el: '#root',
 
             data: {
-                newName: '',
-                names: ["Joe", "Mary", "Jane", "Jack"]
+                isLoading: false
             },
 
             methods: {
-                addName() {
-                    this.names.push(this.newName);
-
-                    this.newName = '';
+                toggleClass() {
+                    this.isLoading = true;
                 }
             }
-
-            
-
         });
 
     </script>
