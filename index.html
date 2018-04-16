@@ -2,23 +2,19 @@
 <html>
 <head>
     <title>Learn Vue</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
+    <style type="text/css">body { padding-top: 40px; }</style>
 </head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
-
-<style>
-    body {
-        padding-top: 40px;
-    }
-</style>
 <body>
 
     
     
     <div id="root" class="container">
+        <modal v-if="showModal" @close="showModal = false">
+            <p>We insert any text here.</p>
+        </modal>
 
-        <message title="Hello World" body="Lorm Ipsum dolar sit amet."></message>
-        <message title="Hello Universe" body="Bla Bla Bla."></message>
-
+        <button @click="showModal = true">Show modal</button>
     </div>
 
 
