@@ -10,11 +10,20 @@
     
     
     <div id="root" class="container">
-        <modal v-if="showModal" @close="showModal = false">
-            <p>We insert any text here.</p>
-        </modal>
-
-        <button @click="showModal = true">Show modal</button>
+        
+        <tabs>
+            <tab name="About Us" :selected="true">
+                <h1>Here is some content for the about us tab</h1>
+            </tab>
+            
+            <tab name="About out culture">
+                <h1>Here is some content for the about out culture tab</h1>    
+            </tab>
+                
+            <tab name="About Vision">
+                <h1>Here is some content for the about our vision tab</h1>
+            </tab>
+        </tabs>
     </div>
 
 
