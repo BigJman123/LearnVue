@@ -10,9 +10,17 @@
     
     
     <div id="root" class="container">
-        <coupon @applied="onCouponApplied"></coupon>
+        <modal>
+            <template slot="header">My Header</template>
 
-        <h1 v-if="couponApplied">You used a coupon!</h1>
+            Amet anim proident do quis quis.
+
+            <template slot="footer">
+                <button class="button is-success">Save changes</button>
+                <button class="button">Cancel</button>
+            </template>
+
+        </modal>
     </div>
 
 
